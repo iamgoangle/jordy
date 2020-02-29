@@ -1,11 +1,11 @@
 <template>
-  <form>
+  <form @submit.prevent="saveName">
     <div class="form-group">
       <h1>
         <slot></slot>
       </h1>
       <label>Input your name</label>
-      <input type="text" class="form-control" :placeholder="hint" />
+      <input type="text" class="form-control" :placeholder="hint" v-model="fullname" />
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
